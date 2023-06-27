@@ -6,14 +6,16 @@
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .container{
-    position: absolute;
     width: 600px;
     height:400px;
-    top: 50%;
-    margin-left: -250px;
-    margin-top: -250px;
-    left: 50%;
     border-radius: 20px;
     box-shadow: 2px 20px 40px 1px rgb(231, 231, 231) ;
     display: flex;
@@ -241,14 +243,15 @@ color:  hsl(241, 100%, 89%);
 
 @media screen and (max-width: 400px) {
     .container {
-        position: absolute;
         margin: 0px auto;
         width:375px;
         height:800px;
       flex-direction: column;
-      top:0;
-      left: 0;
       border-radius: 0px;
+    }
+    .main_container{
+        justify-content: unset;
+        align-items: unset;
     }
     .summary_data{
         margin:0px 35px;
